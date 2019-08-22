@@ -11,9 +11,9 @@ const Variables = {
 //https://github.com/GoogleChrome/puppeteer/blob/v1.19.0/docs/api.md#pagepdfoptions
 const options = {}
 
-async function CreatePDF({ variables, template }) {
+async function CreatePDF(variables) {
 
-  const templateHtml = await rp(template).then(htmlString => htmlString);
+  const templateHtml = await rp(variables.template).then(htmlString => htmlString);
   const templatePDF = handlebars.compile(templateHtml);
   const html = templatePDF(variables);
 
