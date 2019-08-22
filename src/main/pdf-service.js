@@ -3,7 +3,7 @@ const handlebars = require("handlebars");
 const rp = require("request-promise");
 const Joi = require("joi");
 
-const Variables = {
+const ParamsCreatePDF = {
   date: Joi.date().required(),
   template: Joi.string().required()
 };
@@ -31,4 +31,4 @@ async function CreatePDF(variables) {
   return await page.pdf(options);
 }
 
-module.exports = { CreatePDF, Variables };
+module.exports = { CreatePDF, ParamsCreatePDF };
