@@ -1,6 +1,5 @@
 const { Router } = require("express");
 const validate = require("express-validation");
-// const validation = require('./test/validation/login.js');
 
 const { CreatePDF, OptionsPDF } = require("./pdf-service");
 
@@ -13,7 +12,3 @@ router.post("/", async function(req, res, next) {
 });
 
 module.exports = router;
-
-// .response(channel)
-// .type('text/event-stream; charset=utf-8')
-// .header('Content-Encoding', 'none')
