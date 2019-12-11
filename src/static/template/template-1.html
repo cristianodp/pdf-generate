@@ -1,0 +1,531 @@
+<html lang="en" class="gr__templates_cristianodp_now_sh">
+
+<head>
+	<meta charset="utf-8">
+	<title>Form - Template 1</title>
+
+	<!-- Normalize or reset CSS with your favorite library -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+
+	<!-- Load paper.css for happy printing -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.4.1/paper.css">
+
+
+	<!-- Set page size here: A5, A4 or A3 -->
+	<!-- Set also "landscape" if you need -->
+	<style>
+		@page {
+			size: A4
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+
+		.logo {
+			border: 1px solid;
+			padding: 16px;
+			margin-bottom: 8px;
+		}
+
+		p {
+			text-align: justify;
+			font-size: x-small
+		}
+
+		.normal p {
+			font-size: medium;
+		}
+
+
+
+		.input {
+			min-height: 22px;
+		}
+
+		.page-number-container {
+			position: absolute;
+			background: white;
+			top: 79px;
+			right: 55px;
+			padding: 0 8px;
+		}
+
+		.content {
+			padding: 8px;
+		}
+
+		.gruop {
+			background: rgb(241, 241, 241);
+			/* margin-top: 8px; */
+		}
+
+		span.radio-group-option::before {
+			content: "\02610";
+			margin-right: 2px;
+			font-size: x-large;
+		}
+
+		.pension span.radio-group-option[value="{{pension_received}}"]::before {
+			content: "\02612";
+		}
+
+		.imovel span.radio-group-option[value="{{imovel}}"]::before {
+			content: "\02612";
+		}
+
+		.testament span.radio-group-option[value="{{testament}}"]::before {
+			content: "\02612";
+		}
+
+		span.checker:before {
+			content: "\02610";
+			margin-right: 2px;
+			font-size: x-large;
+		}
+
+		span.checker.checker-true:before {
+			content: "\02612";
+			margin-right: 2px;
+			font-size: x-large;
+		}
+
+		.space {
+			margin-bottom: 4px;
+		}
+
+		.row {
+			display: flex;
+			/* text-overflow: ellipsis;
+			white-space: nowrap;
+			overflow: hidden; */
+		}
+
+		.col-auto {
+			align-self: center;
+		}
+
+		.col-6 {
+			align-self: center;
+			flex-grow: 2;
+		}
+
+		.col-3 {
+			align-self: center;
+			flex-grow: 1;
+		}
+
+		.input {
+			padding: 2px 4px 2px 4px;
+			margin: 2px 4px 2px 4px;
+			background-color: rgb(208, 207, 207);
+		}
+
+		.radio-group,
+		.title,
+		.label {
+			padding: 0px 4px;
+			margin: 0px 4px;
+		}
+
+		.label {
+			font-size: x-small;
+			;
+		}
+
+		.input-label {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.col-4 {
+			flex-grow: 4;
+		}
+
+		.col-3 {
+			flex-grow: 3;
+		}
+
+		.col-2 {
+			flex-grow: 2;
+		}
+
+		.col-1 {
+			flex-grow: 1;
+		}
+
+		.box {
+			margin: 8px;
+			height: 48px;
+			text-align: center;
+			display: flex;
+		}
+
+		.box[selected="true"] {
+			border: 1px solid black;
+			border-radius: 50%;
+		}
+	</style>
+</head>
+
+<!-- Set "A5", "A4" or "A3" for class name -->
+<!-- Set also "landscape" if you need -->
+
+<body class="A4" data-gr-c-s-loaded="true">
+
+	<!-- page 1 -->
+	<section class="sheet padding-10mm">
+		<!-- Write HTML just like a web page -->
+		<article>
+			<div class="logo"> Page | date: {{date}}</div>
+			<div class="row content">This is a from example for PDF generation</div>
+
+			<div class="page-number-container">Page 1 of 2</div>
+
+			<section class="gruop content">
+				<div class="row space">
+					<span class="col-auto checker checker-{{checker01}}">Check here for X</span>
+				</div>
+				<div class="row space">
+					<span class="col-auto checker checker-{{checker02}}">Check here for Y</span><span
+						class="col-6 input"> {{text01}}</span>
+				</div>
+			</section>
+
+			<!-- session 1 -->
+			<section class="content">
+				<div class="row space">
+					<span class="col-4">1. Section one </span>
+				</div>
+				<div class="row space">
+					<div class="col-4 input-label" style="width:50%;">
+						<span class="input"> {{first_name}}</span>
+						<span class="label">First Name</span>
+					</div>
+					<div class="col-4 input-label" style="width:50%;">
+						<span class="input"> {{last_name}}</span>
+						<span class="label">Last name</span>
+					</div>
+				</div>
+
+				<div class="row space">
+					<div class="col-1" style="width:50%;">
+						<div class="input-label">
+							<span class="input">{{address}}</span>
+							<span class="label">Adress</span>
+						</div>
+					</div>
+					<div class="col-1" style="width:50%;">
+						<div class="row">
+							<div class="col-1" style="width:35%;">
+								<div class="input-label">
+									<span class="input"> {{post_code}}</span>
+									<span class="label">post code</span>
+								</div>
+							</div>
+							<div class="col-2" style="width:65%;">
+								<div class="input-label">
+									<span class="input"> {{city}}</span>
+									<span class="label">City</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row space">
+					<div class="col-1" style="width:50%;">
+						<div class="row">
+							<div class="col-1" style="width:35%;">
+								<div class="input-label">
+									<span class="input"> {{birthday}}</span>
+									<span class="label">Date of birthday</span>
+								</div>
+							</div>
+							<div class="col-2" style="width:65%;">
+								<div class="input-label">
+									<span class="input"> {{placeofbirth}}</span>
+									<span class="label">Local of birth</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-1" style="width:50%;">
+						<div class="input-label">
+							<span class="input">{{nacionality}}</span>
+							<span class="label">Nacionality</span>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="row space">
+					<div class="col-1" style="width:50%;">
+						<div class="row">
+							<div class="col-1" style="width:50%;">
+								<div class="input-label">
+									<span class="input"> {{[phone]}}</span>
+									<span class="label">Fone</span>
+								</div>
+							</div>
+							<div class="col-2" style="width:50%;">
+								<div class="input-label">
+									<span class="input">{{phone_mobile}}</span>
+									<span class="label">Cellfone</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-1" style="width:50%;">
+						<div class="input-label">
+							<span class="input">{{email}}</span>
+							<span class="label">Email</span>
+						</div>
+					</div>
+
+				</div>
+			</section>
+
+			<!-- session 2 -->
+			<section class="content">
+				<div class="row space">
+					<span class="col-4">2. Session two
+						</span>
+				</div>
+				
+				<div class="row space">
+					<div class="col-1" style="width:50%;">
+						<div class="row space">
+							<div class="col-1" style="width:100%;">
+								<span class="col-4 title">Options:</span>
+							</div>
+							
+						</div>
+						<div class="row space">
+							<div class="col-1" style="width:50%;">
+								<span class="col-auto checker checker-{{check1}}">check1</span>
+							</div>
+							<div class="col-1" style="width:50%;">
+								<span class="col-auto checker checker-{{check2}}">check2</span>
+							</div>
+						</div>
+						<div class="row space">
+							<div class="col-1" style="width:50%;">
+								<span class="col-auto checker checker-{{check3}}">check3</span>
+							</div>
+							<div class="col-1" style="width:50%;">
+								<span class="col-auto checker checker-{{check4}}">check4</span>
+							</div>
+						</div>
+						<div class="row space">
+							<div class="col-1" style="width:50%;">
+								<span class="col-auto checker checker-{{check5}}">check5</span>
+							</div>
+							<div class="col-1" style="width:50%;">
+								<span class="col-auto checker checker-{{check6}}">check6</span>
+							</div>
+						</div>
+						<div class="row space">
+							<div class="col-1" style="width:50%;">
+								<span class="col-auto checker checker-{{check7}}">check7</span>
+							</div>
+							<div class="col-1" style="width:50%;">
+								<span class="col-auto checker checker-{{check8}}">check8</span>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="col-1" style="width:50%;">
+						<div class="row ">
+							<span class="col-4 title">:</span>
+						</div>
+						<div class="row space">
+							<div class="col-1" style="width:100%;">
+								<div class="input-label">
+									<span class="input"> {{text02}}</span>
+									<span class="label">text02</span>
+								</div>
+							</div>
+						</div>
+						<div class="row space">
+							<div class="col-1" style="width:35%;">
+								<div class="input-label">
+									<span class="input"> {{text03}}</span>
+									<span class="label">text03</span>
+								</div>
+							</div>
+							<div class="col-2" style="width:65%;">
+								<div class="input-label">
+									<span class="input"> {{text04}}</span>
+									<span class="label">text04</span>
+								</div>
+							</div>
+						</div>
+						<div class="row space">
+							<div class="col-1" style="width:33%;">
+								<div class="input-label">
+									<span class="input"> {{text05}}</span>
+									<span class="label">text05</span>
+								</div>
+							</div>
+							<div class="col-1" style="width:33%;">
+								<div class="input-label">
+									<span class="input"> {{text06}}</span>
+									<span class="label">text06</span>
+								</div>
+							</div>
+							<div class="col-1" style="width:33%;">
+								<div class="input-label">
+									<span class="input"> {{text07}}</span>
+									<span class="label">text07</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+
+				<div class="row space">
+					<div class="col-1" style="width:33%;">
+						<div class="input-label">
+							<span class="input"> {{text08}}</span>
+							<span class="label">text08</span>
+						</div>
+					</div>
+					<div class="col-1" style="width:33%;">
+						<div class="input-label">
+							<span class="input"> {{text09}}</span>
+							<span class="label">text09</span>
+						</div>
+					</div>
+					<div class="col-1" style="width:33%;">
+						<div class="input-label">
+							<span class="input"> {{text10}}</span>
+							<span class="label">text10</span>
+						</div>
+					</div>
+				</div>
+
+			</section>
+
+			
+		</article>
+
+	</section>
+	<!-- page 2 -->
+	<section class="sheet padding-10mm">
+
+		<!-- Write HTML just like a web page -->
+		<article>
+			<div class="logo"> Page two | date: {{date}}</div>
+			<div class="page-number-container">Page 2 von 2</div>
+
+					<!-- session 1 -->
+                    <section class="content">
+                        <div class="row space">
+                            <span class="col-4">1. Section one </span>
+                        </div>
+                        <div class="row space">
+                            <div class="col-4 input-label" style="width:50%;">
+                                <span class="input"> {{first_name}}</span>
+                                <span class="label">First Name</span>
+                            </div>
+                            <div class="col-4 input-label" style="width:50%;">
+                                <span class="input"> {{last_name}}</span>
+                                <span class="label">Last name</span>
+                            </div>
+                        </div>
+        
+                        <div class="row space">
+                            <div class="col-1" style="width:50%;">
+                                <div class="input-label">
+                                    <span class="input">{{address}}</span>
+                                    <span class="label">Adress</span>
+                                </div>
+                            </div>
+                            <div class="col-1" style="width:50%;">
+                                <div class="row">
+                                    <div class="col-1" style="width:35%;">
+                                        <div class="input-label">
+                                            <span class="input"> {{post_code}}</span>
+                                            <span class="label">post code</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-2" style="width:65%;">
+                                        <div class="input-label">
+                                            <span class="input"> {{city}}</span>
+                                            <span class="label">City</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="row space">
+                            <div class="col-1" style="width:50%;">
+                                <div class="row">
+                                    <div class="col-1" style="width:35%;">
+                                        <div class="input-label">
+                                            <span class="input"> {{birthday}}</span>
+                                            <span class="label">Date of birthday</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-2" style="width:65%;">
+                                        <div class="input-label">
+                                            <span class="input"> {{placeofbirth}}</span>
+                                            <span class="label">Local of birth</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-1" style="width:50%;">
+                                <div class="input-label">
+                                    <span class="input">{{nacionality}}</span>
+                                    <span class="label">Nacionality</span>
+                                </div>
+                            </div>
+        
+                        </div>
+        
+                        <div class="row space">
+                            <div class="col-1" style="width:50%;">
+                                <div class="row">
+                                    <div class="col-1" style="width:50%;">
+                                        <div class="input-label">
+                                            <span class="input"> {{[phone]}}</span>
+                                            <span class="label">Fone</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-2" style="width:50%;">
+                                        <div class="input-label">
+                                            <span class="input">{{phone_mobile}}</span>
+                                            <span class="label">Cellfone</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-1" style="width:50%;">
+                                <div class="input-label">
+                                    <span class="input">{{email}}</span>
+                                    <span class="label">Email</span>
+                                </div>
+                            </div>
+        
+                        </div>
+                    </section>
+
+		</article>
+
+	</section>
+
+
+
+
+
+
+</body><span class="gr__tooltip"><span class="gr__tooltip-content"></span><i class="gr__tooltip-logo"></i><span
+		class="gr__triangle"></span></span>
+
+</html>
