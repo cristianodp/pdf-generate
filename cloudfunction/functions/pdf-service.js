@@ -39,4 +39,4 @@ const PdfGenereteService = (req, res) => {
         });
 };
 
-exports = { PdfGenereteService };
+module.exports = { PdfGenereteService };
