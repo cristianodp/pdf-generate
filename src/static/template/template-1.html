@@ -1,14 +1,19 @@
-<html lang="en" class="gr__templates_cristianodp_now_sh">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
 	<meta charset="utf-8">
 	<title>Form - Template 1</title>
 
 	<!-- Normalize or reset CSS with your favorite library -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+	<link rel="stylesheet" href="normalize.min.css">
 
 	<!-- Load paper.css for happy printing -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.4.1/paper.css">
+	<link rel="stylesheet" href="paper.css">
 
 
 	<!-- Set page size here: A5, A4 or A3 -->
@@ -180,7 +185,7 @@
 			<div class="logo"> Page | date: {{date}}</div>
 			<div class="row content">This is a from example for PDF generation</div>
 
-			<div class="page-number-container">Page 1 of 2</div>
+			<div class="page-number-container">Page 1 of 1</div>
 
 			<section class="gruop content">
 				<div class="row space">
@@ -264,7 +269,7 @@
 						<div class="row">
 							<div class="col-1" style="width:50%;">
 								<div class="input-label">
-									<span class="input"> {{[phone]}}</span>
+									<span class="input"> {{phone}}</span>
 									<span class="label">Fone</span>
 								</div>
 							</div>
@@ -336,77 +341,6 @@
 
 					</div>
 
-					<div class="col-1" style="width:50%;">
-						<div class="row ">
-							<span class="col-4 title">:</span>
-						</div>
-						<div class="row space">
-							<div class="col-1" style="width:100%;">
-								<div class="input-label">
-									<span class="input"> {{text02}}</span>
-									<span class="label">text02</span>
-								</div>
-							</div>
-						</div>
-						<div class="row space">
-							<div class="col-1" style="width:35%;">
-								<div class="input-label">
-									<span class="input"> {{text03}}</span>
-									<span class="label">text03</span>
-								</div>
-							</div>
-							<div class="col-2" style="width:65%;">
-								<div class="input-label">
-									<span class="input"> {{text04}}</span>
-									<span class="label">text04</span>
-								</div>
-							</div>
-						</div>
-						<div class="row space">
-							<div class="col-1" style="width:33%;">
-								<div class="input-label">
-									<span class="input"> {{text05}}</span>
-									<span class="label">text05</span>
-								</div>
-							</div>
-							<div class="col-1" style="width:33%;">
-								<div class="input-label">
-									<span class="input"> {{text06}}</span>
-									<span class="label">text06</span>
-								</div>
-							</div>
-							<div class="col-1" style="width:33%;">
-								<div class="input-label">
-									<span class="input"> {{text07}}</span>
-									<span class="label">text07</span>
-								</div>
-							</div>
-						</div>
-					</div>
-
-
-				</div>
-
-				<div class="row space">
-					<div class="col-1" style="width:33%;">
-						<div class="input-label">
-							<span class="input"> {{text08}}</span>
-							<span class="label">text08</span>
-						</div>
-					</div>
-					<div class="col-1" style="width:33%;">
-						<div class="input-label">
-							<span class="input"> {{text09}}</span>
-							<span class="label">text09</span>
-						</div>
-					</div>
-					<div class="col-1" style="width:33%;">
-						<div class="input-label">
-							<span class="input"> {{text10}}</span>
-							<span class="label">text10</span>
-						</div>
-					</div>
-				</div>
 
 			</section>
 
@@ -414,110 +348,7 @@
 		</article>
 
 	</section>
-	<!-- page 2 -->
-	<section class="sheet padding-10mm">
-
-		<!-- Write HTML just like a web page -->
-		<article>
-			<div class="logo"> Page two | date: {{date}}</div>
-			<div class="page-number-container">Page 2 von 2</div>
-
-					<!-- session 1 -->
-                    <section class="content">
-                        <div class="row space">
-                            <span class="col-4">1. Section one </span>
-                        </div>
-                        <div class="row space">
-                            <div class="col-4 input-label" style="width:50%;">
-                                <span class="input"> {{first_name}}</span>
-                                <span class="label">First Name</span>
-                            </div>
-                            <div class="col-4 input-label" style="width:50%;">
-                                <span class="input"> {{last_name}}</span>
-                                <span class="label">Last name</span>
-                            </div>
-                        </div>
-        
-                        <div class="row space">
-                            <div class="col-1" style="width:50%;">
-                                <div class="input-label">
-                                    <span class="input">{{address}}</span>
-                                    <span class="label">Adress</span>
-                                </div>
-                            </div>
-                            <div class="col-1" style="width:50%;">
-                                <div class="row">
-                                    <div class="col-1" style="width:35%;">
-                                        <div class="input-label">
-                                            <span class="input"> {{post_code}}</span>
-                                            <span class="label">post code</span>
-                                        </div>
-                                    </div>
-                                    <div class="col-2" style="width:65%;">
-                                        <div class="input-label">
-                                            <span class="input"> {{city}}</span>
-                                            <span class="label">City</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-        
-                        <div class="row space">
-                            <div class="col-1" style="width:50%;">
-                                <div class="row">
-                                    <div class="col-1" style="width:35%;">
-                                        <div class="input-label">
-                                            <span class="input"> {{birthday}}</span>
-                                            <span class="label">Date of birthday</span>
-                                        </div>
-                                    </div>
-                                    <div class="col-2" style="width:65%;">
-                                        <div class="input-label">
-                                            <span class="input"> {{placeofbirth}}</span>
-                                            <span class="label">Local of birth</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-1" style="width:50%;">
-                                <div class="input-label">
-                                    <span class="input">{{nacionality}}</span>
-                                    <span class="label">Nacionality</span>
-                                </div>
-                            </div>
-        
-                        </div>
-        
-                        <div class="row space">
-                            <div class="col-1" style="width:50%;">
-                                <div class="row">
-                                    <div class="col-1" style="width:50%;">
-                                        <div class="input-label">
-                                            <span class="input"> {{[phone]}}</span>
-                                            <span class="label">Fone</span>
-                                        </div>
-                                    </div>
-                                    <div class="col-2" style="width:50%;">
-                                        <div class="input-label">
-                                            <span class="input">{{phone_mobile}}</span>
-                                            <span class="label">Cellfone</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-1" style="width:50%;">
-                                <div class="input-label">
-                                    <span class="input">{{email}}</span>
-                                    <span class="label">Email</span>
-                                </div>
-                            </div>
-        
-                        </div>
-                    </section>
-
-		</article>
-
+	
 	</section>
 
 
