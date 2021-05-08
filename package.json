@@ -24,7 +24,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "express-validation": "^1.0.2",
-    "handlebars": "^4.1.2",
+    "handlebars": "^4.7.7",
     "joi": "^14.3.1",
     "puppeteer": "^1.19.0",
     "request-promise": "^4.2.4"
